@@ -1,0 +1,76 @@
+/* reset */
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+/* main style */
+
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+h1,h2,h3{
+    padding-bottom: 20px;
+}
+
+p{
+    margin: 10px 0;
+}
+
+body{
+    background-image: url('https://source.unsplash.com/1600x900/?numbers');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.7;
+}
+
+/* header */
+
+#header{
+}
+
+/* navbar */
+
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    background: #333;
+    color: #fff;
+}
+
+#navbar a{
+    color: #fff;
+}
+
+#navbar h1{
+    text-align: center;
+    padding: 20px;
+}
+
+#navbar ul{
+    list-style: none;
+}
+#navbar ul li{
+    float: left;
+}
+
+#navbar ul li a{
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current{
+    background: #111;
+}
