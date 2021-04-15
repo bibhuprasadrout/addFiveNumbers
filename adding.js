@@ -1,8 +1,74 @@
 let num1, num2, num3, num4, num5
-
+document.querySelector('#num1').addEventListener('input', function(event){
+    num1 = document.querySelector('#num1').value
+    console.log(num1)
+})
+document.querySelector('#num2').addEventListener('input', function(event){
+    num2 = document.querySelector('#num2').value
+    console.log(num2)
+})
+document.querySelector('#num3').addEventListener('input', function(event){
+    num3 = document.querySelector('#num3').value
+    console.log(num3)
+})
+document.querySelector('#num4').addEventListener('input', function(event){
+    num4 = document.querySelector('#num4').value
+    console.log(num4)
+})
+document.querySelector('#num5').addEventListener('input', function(event){
+    num5 = document.querySelector('#num5').value
+    console.log(num5)
+})
 let add = function(num1=0, num2=0, num3=0, num4=0, num5=0){
-    let sum = num1 + num2 + num3 + num4 + num5
-    return sum
+    return +num1 + +num2 + +num3 + +num4 + +num5
 }
-let sum = add(5, 13, 7, 21, 48)
-console.log(sum)
+let sum
+
+
+let oddOrEven = function(num){
+    if(num%2 === 0){
+        return 'Even'
+    }else{
+        return 'Odd'
+    }
+}
+
+let max = function(num1=0, num2=0, num3=0, num4=0, num5=0){
+    let numArr = [+num1, +num2, +num3, +num4, +num5]
+    let val = 0
+    for(let num = 0; num < numArr.length; num++){
+        if(val<numArr[num]){
+            val=numArr[num]
+            continue
+        }
+    }
+    return val
+}
+let maxNum
+
+let min = function(num1=0, num2=0, num3=0, num4=0, num5=0){
+    let numArr = [+num1, +num2, +num3, +num4, +num5]
+    let val = numArr[0]
+    for(let num = 0; num < numArr.length; num++){
+        if(val>numArr[num]){
+            val=numArr[num]
+            continue
+        }
+    }
+    return val
+}
+let minNum
+document.querySelector('#submitButton').addEventListener('click', function(event){
+    event.preventDefault()
+    sum = add(num1,num2,num3,num4,num5)
+    maxNum = max(num1,num2,num3,num4,num5)
+    minNum = min(num1,num2,num3,num4,num5)
+    document.querySelector('#output1').appendChild(document.createTextNode(`The sum of the above five numbers is ${sum}.`))
+    document.querySelector('#output2').appendChild(document.createTextNode(`The first number is ${oddOrEven(num1)}.`))
+    document.querySelector('#output3').appendChild(document.createTextNode(`The second number is ${oddOrEven(num2)}.`))
+    document.querySelector('#output4').appendChild(document.createTextNode(`The third number is ${oddOrEven(num3)}.`))
+    document.querySelector('#output5').appendChild(document.createTextNode(`The fourth number is ${oddOrEven(num4)}.`))
+    document.querySelector('#output6').appendChild(document.createTextNode(`The fifth number is ${oddOrEven(num5)}.`))
+    document.querySelector('#output7').appendChild(document.createTextNode(`The smallest number entered is ${minNum}.`))
+    document.querySelector('#output8').appendChild(document.createTextNode(`The largest number entered is ${maxNum}.`))
+})

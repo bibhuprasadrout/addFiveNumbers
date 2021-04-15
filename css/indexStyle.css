@@ -31,7 +31,13 @@ body{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    opacity: 0.7;
+    opacity: 0.9;
+}
+
+/* utility classes */
+
+.text-dark{
+    color: #111;
 }
 
 /* header */
@@ -73,4 +79,90 @@ body{
 #navbar ul li a:hover,
 #navbar ul li a.current{
     background: #111;
+}
+
+/* main-section */
+
+#main-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Showcase */
+
+#showcase{
+    text-align: center;
+    color: #fff;
+    padding-top: 170px;
+    font-size: 3.7em;
+}
+
+/* math-box */
+
+#math-box{
+    height: 970px;
+    width: 770px;
+    margin-top: 30px;
+    padding-top: 70px;
+    background: #111;
+    border-radius: 7px;
+    text-align: center;
+    color: #fff;
+}
+
+#math-box h3{
+    margin-bottom: 30px;
+    font-size: 3em;
+}
+
+.num{
+    padding-bottom: 30px;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.num label{
+    flex: 1;
+    padding-top: 7px;
+    font-size: 30px;
+    text-align: left;
+}
+
+.num input{
+    flex: 2;
+    margin: 0 50px 0 20px;
+    height: 50px;
+    border-radius: 7px;
+    font-size: 1.3em;
+}
+
+#submitButton{
+    margin-top: 30px;
+    padding: 13px 170px 13px 170px;
+    font-size: 2.7em;
+    background: #fff;
+    color: #111;
+    border-radius: 7px;
+}
+#resetButton{
+    margin-top: 30px;
+    padding: 13px 110px 13px 110px;
+    font-size: 2.1em;
+    background: #fff;
+    color: #111;
+    border-radius: 7px;
+}
+#output-box{
+    height: 370px;
+    width: 770px;
+    margin-top: 30px;
+    padding-top: 70px;
+    background: #fff;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 1.7em;
+    color: #111;
 }
