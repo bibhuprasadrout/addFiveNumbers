@@ -1,18 +1,25 @@
+const number1 = document.querySelector('#num1')
+const number2 = document.querySelector('#num2')
+const number3 = document.querySelector('#num3')
+const number4 = document.querySelector('#num4')
+const number5 = document.querySelector('#num5')
+
 let num1, num2, num3, num4, num5
-document.querySelector('#num1').addEventListener('input', function(event){
-    num1 = document.querySelector('#num1').value
+
+number1.addEventListener('input', function(event){
+    num1 = number1.value
 })
-document.querySelector('#num2').addEventListener('input', function(event){
-    num2 = document.querySelector('#num2').value
+number2.addEventListener('input', function(event){
+    num2 = number2.value
 })
-document.querySelector('#num3').addEventListener('input', function(event){
-    num3 = document.querySelector('#num3').value
+number3.addEventListener('input', function(event){
+    num3 = number3.value
 })
-document.querySelector('#num4').addEventListener('input', function(event){
-    num4 = document.querySelector('#num4').value
+number4.addEventListener('input', function(event){
+    num4 = number4.value
 })
-document.querySelector('#num5').addEventListener('input', function(event){
-    num5 = document.querySelector('#num5').value
+number5.addEventListener('input', function(event){
+    num5 = number5.value
 })
 
 
@@ -48,6 +55,7 @@ let max = function(num1=0, num2=0, num3=0, num4=0, num5=0){
 }
 let maxNum
 
+
 let min = function(num1=0, num2=0, num3=0, num4=0, num5=0){
     let numArr = [+num1, +num2, +num3, +num4, +num5]
     let val = numArr[0]
@@ -61,7 +69,8 @@ let min = function(num1=0, num2=0, num3=0, num4=0, num5=0){
 }
 let minNum
 
-document.querySelector('#submitButton').addEventListener('click', function(event){
+
+document.querySelector('#form').addEventListener('submit', function(event){
     event.preventDefault()
     document.querySelector('#output-box').removeAttribute('hidden')
     sum = add(num1,num2,num3,num4,num5)
