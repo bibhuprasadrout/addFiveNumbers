@@ -7,24 +7,6 @@
 
 /* main style */
 
-html{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.7em;
-}
-
-a{
-    color: #333;
-    text-decoration: none;
-}
-
-h1,h2,h3{
-    padding-bottom: 20px;
-}
-
-p{
-    margin: 10px 0;
-}
-
 body{
     background-image: url('https://source.unsplash.com/1600x900/?numbers');
     background-repeat: no-repeat;
@@ -32,6 +14,17 @@ body{
     background-position: center;
     background-attachment: fixed;
     opacity: 0.9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
 }
 
 /* utility classes */
@@ -54,25 +47,21 @@ body{
 }
 
 #navbar h1{
-    text-align: center;
-    padding: 20px;
+    padding: 1em;
 }
 
 #navbar ul{
-    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 #navbar ul li{
-    float: left;
+    font-size: 1.3em;
+    padding: 1.1em;
 }
 
-#navbar ul li a{
-    display: block;
-    text-align: center;
-    padding: 20px;
-}
-
-#navbar ul li a:hover,
-#navbar ul li a.current{
+#navbar ul li:hover,
+#navbar ul li.current{
     background: #111;
 }
 
@@ -122,7 +111,7 @@ body{
 .num label{
     flex: 1;
     padding: 1vh;
-    font-size: 1.7em;
+    font-size: 1.3em;
     text-align: left;
 }
 
@@ -130,13 +119,11 @@ body{
     flex: 2;
     width: 100%;
     height: 7vh;
+    border: 0;
     border-radius: 7px;
+    outline: 0;
     font-size: 1.3em;
     padding: 0 0 0 1vw;
-}
-
-.num input:focus{
-    outline: 0;
 }
 
 #submitButton{
@@ -160,13 +147,13 @@ body{
 
 /* output */
 #output-box{
-    height: 370px;
-    width: 770px;
-    margin: 7vh auto 7vh auto;
-    padding-top: 70px;
+    height: 70vh;
+    width: 70vw;
+    padding: 3em;
+    margin: 7vh ;
+    text-align: center;
     background: #fff;
     border-radius: 7px;
-    text-align: center;
     font-size: 1.3em;
     line-height: 1.7em;
     color: #111;

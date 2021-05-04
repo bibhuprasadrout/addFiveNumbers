@@ -14,7 +14,7 @@
         <nav id="navbar">
             <h1 class="logo"><a href="index.html">AFN</a></h1>
             <ul>
-                <li><a class="current" href="index.html">Home</a></li>
+                <li class="current"><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -28,7 +28,7 @@
         <article>
             <div id="math-box">
                 <h3>Enter the numbers</h3>
-                <form action="#" method="GET" id="form">
+                <form action="#" method="GET" id="mathForm">
                     <div class="num">
                         <label for="num1">First Number</label>
                         <input class="input-num" type="number" name="num1" id="num1" placeholder="Enter a Number">
@@ -59,7 +59,8 @@
             </div>
         </article>
         <article>
-            <div id="output-box" hidden>
+            <!-- the hidden attribute does not work for an element, when the display property is used in css while targeting the same element -->
+            <div id="output-box" hidden> 
                 <div id="output1"></div>
                 <div id="output2"></div>
                 <div id="output3"></div>
