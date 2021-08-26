@@ -1,0 +1,1 @@
+This is a simple JavaScript app to help the user add five numbers.

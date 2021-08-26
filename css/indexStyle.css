@@ -1,14 +1,15 @@
 /* reset */
 *{
+    box-sizing: border-box;
     margin: 0px;
     padding:0px;
-    box-sizing: border-box;
 }
 
 /* main style */
 
 body{
     background-image: url('https://source.unsplash.com/1600x900/?numbers');
+    height: 90vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
